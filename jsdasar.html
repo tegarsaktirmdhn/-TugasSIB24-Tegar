@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSDASAR</title>
+</head>
+<body>
+
+<h1>Cek Ganjil atau Genap</h1>
+
+<p>Masukkan bilangan untuk mengetahui apakah itu ganjil atau genap:</p>
+
+<input type="number" id="inputBilangan">
+<button onclick="cekGanjilGenap()">Cek</button>
+
+<p id="hasil"></p>
+
+<script>
+// Fungsi untuk mengecek apakah bilangan ganjil atau genap
+function cekGanjilGenap() {
+    var bilangan = document.getElementById("inputBilangan").value;
+    if (bilangan % 2 === 0) {
+        document.getElementById("hasil").innerText = "Bilangan " + bilangan + " adalah bilangan genap";
+    } else {
+        document.getElementById("hasil").innerText = "Bilangan " + bilangan + " adalah bilangan ganjil";
+    }
+}
+
+function tampilkanInformasi() {
+    // Meminta nama pengguna
+    var nama = prompt("Siapa nama anda?");
+    // Meminta umur pengguna
+    var umur = prompt("Berapa umur anda?");
+    // Meminta tempat tinggal pengguna
+    var tempatTinggal = prompt("Anda tinggal dimana?");
+
+    // Menampilkan informasi yang dimasukkan pengguna
+    alert("Nama Anda: " + nama + "\nUmur Anda: " + umur + "\nTempat Tinggal Anda: " + tempatTinggal);
+}
+
+// Memanggil fungsi tampilkanInformasi saat halaman dimuat
+window.onload = tampilkanInformasi;
+
+</script>
+
+</body>
+</html>
