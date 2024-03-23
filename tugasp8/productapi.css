@@ -1,0 +1,75 @@
+/* CSS untuk mengatur 4 kartu berjejer ke kanan */
+.card-produk {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    max-width: calc(30% - 20px); /* Lebar 30% dengan margin 20px di setiap sisi */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Memperbesar padding */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Memperbesar radius border */
+    margin: 20px; /* Memperbesar margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memperbesar box shadow */
+}
+
+
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.card .info {
+    text-align: center;
+}
+
+.card .mana {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.card .deskripsi {
+    font-size: 14px;
+    color: #555;
+}
+
+.card .harga {
+    font-size: 16px;
+    color: #007bff;
+}
+
+/* CSS untuk tata letak dan gaya navbar */
+nav {
+    background-color: #A6CF98;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #7F9F80;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #777;
+}
