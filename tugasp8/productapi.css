@@ -73,3 +73,9 @@ nav {
 .nav-links a:hover {
     background-color: #777;
 }
+
+@media screen and (max-width: 768px) {
+    .card {
+        max-width: calc(50% - 20px);
+    }
+}
