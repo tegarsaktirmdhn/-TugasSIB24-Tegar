@@ -7,24 +7,53 @@
     <title>Login Form</title>
 </head>
 <body>
-    <body>
-        <div class="login-container">
-            <div class="login-title">Masuk</div>
-            <form>
-                <div class="form-group">
-                    <label for="username">Nomor HP atau Email</label>
-                    <input type="text" id="username" name="username" placeholder="Masukkan nomor HP atau email">
-                </div>
-                <div class="form-group">
-                    <label for="password">Sandi (minimal 8 karakter)</label>
-                    <input type="password" id="password" name="password" placeholder="Masukkan sandi">
-                </div>
-                <button class="login-button" type="submit">Masuk</button>
-                <button class="login-button secondary-button">Masuk dengan Google</button>
-                <div class="register-link">Belum Punya Akun? <a href="#">Daftar Gratis!</a></div>
-                <div>© Toko</div>
-            </form>
-        </div>
-    </body>
+    <div class="login-container">
+        <div class="login-title">Masuk</div>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Nomor HP atau Email</label>
+                <input type="text" id="username" name="username" placeholder="Masukkan nomor HP atau email">
+            </div>
+            <div class="form-group">
+                <label for="password">Sandi (minimal 8 karakter)</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan sandi">
+            </div>
+            <button class="login-button" type="submit">Masuk</button>
+            <button class="login-button secondary-button">Masuk dengan Google</button>
+            <div class="register-link">Belum Punya Akun? <a href="#">Daftar Gratis!</a></div>
+            <div>© Toko</div>
+        </form>
+    </div>
+
+    <script>
+        // Simpan username dan password yang benar
+        const correctUsername = "tegar";
+        const correctPassword = "sandi123";
+
+        // Fungsi untuk menangani pengiriman formulir
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Mencegah pengiriman formulir
+
+            // Ambil nilai username dan password dari input
+            const usernameInput = document.getElementById("username").value;
+            const passwordInput = document.getElementById("password").value;
+
+            // Periksa apakah username dan password sesuai
+            if (usernameInput === correctUsername && passwordInput === correctPassword) {
+                // Jika benar, alihkan ke halaman produk
+                window.location.href = "product_responsive.html";
+            } else {
+                // Jika salah, tampilkan pesan kesalahan
+                const errorMessage = document.createElement("div");
+                errorMessage.textContent = "Username atau password salah";
+                errorMessage.style.color = "red";
+                document.body.appendChild(errorMessage);
+            }
+        }
+
+        // Tambahkan event listener untuk menangani submit formulir
+        const loginForm = document.getElementById("login-form");
+        loginForm.addEventListener("submit", handleFormSubmit);
+    </script>
 </body>
 </html>
